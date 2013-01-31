@@ -23,4 +23,4 @@ requires:
   Authen::Simple::Password: 0
   Mojolicious: 1.4
   Test::More: 0
-version: 0.01
+version: 0.02
