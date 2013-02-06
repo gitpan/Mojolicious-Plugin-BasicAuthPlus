@@ -3,7 +3,11 @@ abstract: 'Basic HTTP Auth Helper Plus'
 author:
   - 'Brad Robertson <blr@cpan.org>'
 build_requires:
-  ExtUtils::MakeMaker: 0
+  Mojo::ByteStream: 0
+  Mojo::IOLoop: 0
+  Mojolicious::Lite: 0
+  Test::Mojo: 0
+  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 0
 dynamic_config: 1
@@ -23,4 +27,8 @@ requires:
   Authen::Simple::Password: 0
   Mojolicious: 1.4
   Test::More: 0
-version: 0.02
+  perl: 5.006001
+resources:
+  bugtracker: http://github.com/stregone/mojolicious-plugin-basicauthplus/issues
+  repository: http://github.com/stregone/mojolicious-plugin-basicauthplus
+version: 0.03

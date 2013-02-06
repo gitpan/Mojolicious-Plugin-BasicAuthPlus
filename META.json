@@ -22,7 +22,11 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0"
+            "Mojo::ByteStream" : "0",
+            "Mojo::IOLoop" : "0",
+            "Mojolicious::Lite" : "0",
+            "Test::Mojo" : "0",
+            "Test::More" : "0"
          }
       },
       "configure" : {
@@ -36,10 +40,19 @@
             "Authen::Simple::Passwd" : "0",
             "Authen::Simple::Password" : "0",
             "Mojolicious" : "1.4",
-            "Test::More" : "0"
+            "Test::More" : "0",
+            "perl" : "5.006001"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.02"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/stregone/mojolicious-plugin-basicauthplus/issues"
+      },
+      "repository" : {
+         "url" : "http://github.com/stregone/mojolicious-plugin-basicauthplus"
+      }
+   },
+   "version" : "0.03"
 }
