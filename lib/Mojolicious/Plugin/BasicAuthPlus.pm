@@ -6,7 +6,7 @@ use Authen::Simple::Password;
 use Authen::Simple::Passwd;
 use Authen::Simple::LDAP;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub register {
     my ( $plugin, $app ) = @_;
@@ -92,6 +92,7 @@ sub _check_ldap {
     my ( $self, $c, $auth, $params ) = @_;
     my ( $username, $password ) = _split_auth($auth);
 
+    return 0 unless defined $password;
     my $ldap = Authen::Simple::LDAP->new(%$params);
 
     return 1 if $ldap->authenticate( $username, $password );
@@ -116,7 +117,7 @@ Mojolicious::Plugin::BasicAuthPlus - Basic HTTP Auth Helper Plus
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =head1 SYNOPSIS
 
@@ -341,6 +342,10 @@ Based on Mojolicious::Plugin::BasicAuth, by Glen Hinkle <tempire@cpan.org>.
 
 Brad Robertson <blr@cpan.org>
 
+=head1 CONTRIBUTORS
+
+Jay Mortensen <jay@purplewire.com>
+
 =head1 SEE ALSO
 
 L<Mojolicious>, L<Mojolicious::Guides>, L<http://mojolicio.us>,
@@ -348,7 +353,7 @@ L<Authen::Simple::Password>, L<Authen::Simple::LDAP>, L<Authen::Simple::Passwd>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2013 by Brad Robertson.
+Copyright (c) 2013-2014 by Brad Robertson.
 
 =head1 LICENSE
 
