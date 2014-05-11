@@ -6,7 +6,7 @@ use Authen::Simple::Password;
 use Authen::Simple::Passwd;
 use Authen::Simple::LDAP;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 sub register {
     my ( $plugin, $app ) = @_;
@@ -76,7 +76,14 @@ sub _password_prompt {
     return;
 }
 
-sub _split_auth { return split ':', $_[0] }
+sub _split_auth {
+    my ( $username, $password ) = split ':', $_[0];
+
+    $username = '' unless defined $username;
+    $password = '' unless defined $password;
+
+    return ( $username, $password );
+}
 
 sub _check_simple {
     my ( $self, $c, $auth, $params ) = @_;
@@ -117,7 +124,7 @@ Mojolicious::Plugin::BasicAuthPlus - Basic HTTP Auth Helper Plus
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =head1 SYNOPSIS
 
@@ -344,7 +351,15 @@ Brad Robertson <blr@cpan.org>
 
 =head1 CONTRIBUTORS
 
-Jay Mortensen <jay@purplewire.com>
+In alphabetical order:
+
+=over 2
+
+G.Y. Park
+
+Jay Mortensen
+
+=back
 
 =head1 SEE ALSO
 

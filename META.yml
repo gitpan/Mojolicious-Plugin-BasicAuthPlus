@@ -31,4 +31,4 @@ requires:
 resources:
   bugtracker: http://github.com/stregone/mojolicious-plugin-basicauthplus/issues
   repository: http://github.com/stregone/mojolicious-plugin-basicauthplus
-version: 0.05
+version: 0.06
