@@ -3,32 +3,32 @@ abstract: 'Basic HTTP Auth Helper Plus'
 author:
   - 'Brad Robertson <blr@cpan.org>'
 build_requires:
-  Mojo::ByteStream: 0
-  Mojo::IOLoop: 0
-  Mojolicious::Lite: 0
-  Test::Mojo: 0
-  Test::More: 0
+  Mojo::ByteStream: '0'
+  Mojo::IOLoop: '0'
+  Mojolicious::Lite: '0'
+  Test::Mojo: '0'
+  Test::More: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 0
+  ExtUtils::MakeMaker: '0'
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921'
+generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Mojolicious-Plugin-BasicAuthPlus
 no_index:
   directory:
     - t
     - inc
 requires:
-  Authen::Simple::LDAP: 0
-  Authen::Simple::Passwd: 0
-  Authen::Simple::Password: 0
-  Mojolicious: 1.4
-  Test::More: 0
-  perl: 5.006001
+  Authen::Simple::LDAP: '0'
+  Authen::Simple::Passwd: '0'
+  Authen::Simple::Password: '0'
+  Mojolicious: '1.4'
+  Test::More: '0'
+  perl: '5.006001'
 resources:
   bugtracker: http://github.com/stregone/mojolicious-plugin-basicauthplus/issues
   repository: http://github.com/stregone/mojolicious-plugin-basicauthplus
-version: 0.06
+version: '0.07'
